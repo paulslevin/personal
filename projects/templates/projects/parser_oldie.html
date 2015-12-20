@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+<link rel="stylesheet" type="text/css"
+href="{% static 'projects/index.css' %}"/>
+
+<title>
+  Polynomial Parser
+</title>
+
+<h1>Polynomial Parser</h1>
+
+<p>
+  This application converts a valid polynomial expression to standard form. See
+  <a href="#terminology">below</a> for details of the terminology.
+  Just type a string and hit Enter. This parser is kind and allows you to
+  include spaces.
+</p>
+
+
+<form method="POST">
+{% csrf_token %}
+    Input expression:
+    <br><input type="code" action=? type="text" name="poly"></br>
+</form>
+
+{% if user_typed %}
+    <p>You typed: <code>{{ user_typed }}</code></p>
+    {% if not standard_form %}
+        <p>Unfortunately, this is not in the appropriate format.</p>
+    {% else %}
+        <p>In standard form: <code>{{ standard_form }}</code></p>
+    {% endif %}
+{% endif %}
+
+<h2 id="terminology">Terminology</h2>
+
+<p>
+  <strong>Definition: </strong>A <em>valid</em>
+  <a target="_blank" href="https://en.wikipedia.org/wiki/Polynomial">
+    polynomial</a>
+  expression is a string containing the characters
+  <pre>+ - 0 1 2 3 4 5 6 7 8 9 ( ) * x</pre>
+  representing a polynomial in <code>x</code> such that the bracketing is correct.
+  We also require that any indices are given as positive integers, with no extra
+  formatting. For example,
+  <pre>(9*x+5)**6*(3+x)*2     x**10+(1+5*x+3)**5+x**2</pre>
+  are both valid polynomials, but
+  <pre>x**0.5     x**(3-2)</pre>
+  are not.
+</p>
+<p>
+<strong>Definition: </strong>A polynomial is in <em>standard form</em> if it looks like
+<pre>
+a_n*x**n+...+a_2*x**2+a_1*x+a_0
+</pre>
+for some number <code>n</code> and numbers <code>a_n,...,a_0</code>.
+</p>
