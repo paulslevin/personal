@@ -1,11 +1,58 @@
-<h1>Paul Slevin's Website</h1>
+{% load staticfiles %}
 
-<p>
-Welcome to my website!
-</p>
+<link rel="stylesheet" type="text/css"
+      href="{%  static 'home/style.css' %}"/>
 
-<ul>
-    <li><a href="{% url 'music:index' %}">Music</a></li>
-    <li><a href="{% url 'projects:index' %}">Projects</a></li>
-    <li><a href="{% url 'research:index' %}">Research</a></li>
-</ul>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Paul Slevin's Website</title>
+</head>
+
+
+<div id="headline">
+    <div class="container">
+        <h1>
+            Paul Slevin
+        </h1>
+        <p>Welcome to my website!</p>
+    </div>
+</div>
+
+
+<div id="about">
+    <div class="container">
+        <h2>
+            About Me
+        </h2>
+        <img id="mepic" src="{% static 'home/paul1.jpg' %}" alt="Paul Slevin"/>
+        <p>I am a programmer, a mathematician
+        and a musician.</p>
+        <p>I am currently studying for a PhD in
+        Mathematics at the University of Glasgow.</p>
+        <p>Click the following links to find out more.</p>
+        <br/>
+        <a href="{% url 'projects:index' %}">Projects</a></li>
+        <a href="{% url 'research:index' %}">Research</a></li>
+        <a href="{% url 'music:index' %}">Music</a></li>
+    <br/>
+    </div>
+    <br/>
+</div>
+
+
+
+{#<div id="work">#}
+{#    <div class="container">#}
+{#    <h2>My Work</h2>#}
+{#    <p>I am a programmer, mathematician and a musician. Click the links below#}
+{#    to find out more.</p>#}
+{##}
+{#    </div>#}
+{#</div>#}
+
+
+<footer>
+    <div class="container">
+        <p>This site is powered by Django.</p>
+    </div>
+</footer>
