@@ -1,19 +1,42 @@
-<h1>My Research</h1>
+{% load staticfiles %}
 
-<p>
-Welcome to my research page! Here you can find
-a list of my published mathematical research. Each link
-will take you to an online version of each work. They are
+<link rel="stylesheet" type="text/css"
+      href="{%  static 'research/index.css' %}"/>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research</title>
+</head>
+
+<div id="about">
+    <div class="container">
+        <h2>My Research</h2>
+        <p>
+Here you can find
+a list of my published mathematical research.
+        </p>
+        <p>Each link
+will take you to an online version of each work.
+        </p>
+        <p>They are
 listed in chronological order of publication.
-</p>
+        </p>
+        <ol>
+            {% for paper in latest_papers %}
+            <li>
+                <a target ="_blank" href="{{ paper.address }}">{{ paper.title }}</a>
+            </li>
+        {% endfor %}
+        </ol>
+    </div>
+</div>
 
-{% if latest_papers %}
-    <ol>
-    {% for paper in latest_papers %}
-        <li><a target ="_blank" href="{{ paper.address }}">{{ paper.title }}</a></li>
-    {% endfor %}
-    </ol>
 
-{% else %}
-    <p>No papers are available.</p>
-{% endif %}
+
+
+
+<footer>
+    <div class="container">
+        <p>This site is powered by Django.</p>
+    </div>
+</footer>

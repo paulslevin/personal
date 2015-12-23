@@ -1,0 +1,67 @@
+{ % load staticfiles % }
+
+body {
+    margin: 0px 0px 0px 0px;
+}
+
+#about {
+    text-align: center;
+    /*font-weight: 600;*/
+    font-family: Roboto, sans-serif;
+    background-image: linear-gradient(
+            rgba(40, 0, 0, 0.3),
+            rgba(40, 0, 0, 0.3)
+    ),
+    url(earth.jpg);
+    background-size: cover;
+    padding: 20px 5%;
+    color: white;
+}
+
+#about h2 {
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 1em;
+  }
+
+footer {
+    text-align: center;
+    background-color: green;
+    background-size: cover;
+    padding: 5px 5%;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+ol {
+    padding-left: 0;
+    padding-right: 0;
+    list-style-position: inside;
+    list-style-type: upper-roman;
+}
+
+#about a {
+    clear: both;
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 5%;
+    color: #cc1111;
+    background-color: white;
+    background-size: cover;
+    width: 75%;
+    margin: 1% 0;
+    box-sizing: border-box;
+    box-shadow: black 0 0 5px;
+    border-radius: 25px;
+}
+
+.container {
+    clear: both;
+    margin: auto;
+    max-width: 800px;
+}
+
+@media (min-width: 600px) {
+
+}
+

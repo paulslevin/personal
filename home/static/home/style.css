@@ -1,0 +1,105 @@
+{ % load staticfiles % }
+
+body {
+    margin: 0px 0px 0px 0px;
+}
+
+#headline {
+    font-size: 30px;
+    background-color: dodgerblue;
+    background-size: cover;
+    padding: 10px 5%;
+    color: white;
+    font-family: Roboto, helvetica, arial, sans-serif;
+}
+
+#headline h1 {
+    font-weight: 200;
+    font-size: 45px;
+    line-height: 1em;
+    /*margin-bottom: 0;*/
+}
+
+#about {
+    /*font-weight: 600;*/
+    font-family: Roboto, sans-serif;
+    background-image: linear-gradient(
+            rgba(40, 0, 0, 0.3),
+            rgba(40, 0, 0, 0.3)
+    ),
+    url(glasgow.jpg);
+    /*background-color: #cc1111;*/
+    background-size: cover;
+    padding: 20px 5%;
+    color: white;
+}
+
+#about h2 {
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 1em;
+  }
+
+#about .container {
+    text-align: center;
+  }
+
+footer {
+    text-align: center;
+    background-color: green;
+    background-size: cover;
+    padding: 5px 5%;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+#about a {
+    /*text-align: center;*/
+    /*font-family: Roboto, sans-serif;*/
+    text-decoration: none;
+    padding: 20px 5%;
+    color: #cc1111;
+    background-color: white;
+    width: 100%;
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: black 0 0 5px;
+    border-radius: 25px;
+}
+
+#headline br {
+    clear: both;
+}
+
+#mepic {
+    /*float: right;*/
+    width: 40%;
+    margin: 0 auto;
+    margin: 1%;
+    border: 5px solid;
+    border-color: #cc1111;
+    box-sizing: border-box;
+    border-radius: 50% 50%;
+    box-shadow: black 0 0 5px;
+}
+
+#about ul {
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding-right: 1em;
+}
+
+
+#headline #header{
+    float: left;
+}
+.container {
+    /*float:left;*/
+    margin: auto;
+    max-width: 800px;
+}
+
+@media (min-width: 600px) {
+
+}
