@@ -1,26 +1,59 @@
-<h1>My Music</h1>
+{% load staticfiles %}
 
-<p>
-Welcome to my music page! Here you can find
-a selection of my musical compositions. Each link
+<link rel="stylesheet" type="text/css"
+      href="{%  static 'music/index.css' %}"/>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music</title>
+</head>
+
+<div id="page">
+<div id="about">
+<div class="container">
+        <h2>My Music</h2>
+        <p>
+Here you can find
+a selection of my musical compositions.
+        </p>
+        <p>Each link
 will open up an embedded YouTube video for you to listen to.
-</p>
+        </p>
+
+
 
 {% if pieces %}
-    <ul>
+
+
     {% for p in pieces %}
-        <li><a href="http://www.youtube.com/embed/{{ p.code }}"
+        <div>
+        <a class="musiclink" href="http://www.youtube.com/embed/{{ p.code }}"
         target="video" onclick="test();return true">
-        {{ p.title }}</a></li>
+        {{ p.title }}
+        </a>
+        </div>
     {% endfor %}
-    </ul>
+
 
 {% else %}
     <p>No compositions are available.</p>
 {% endif %}
 
-<p>Click <a target = "_blank" href="https://www.youtube.com/user/slevvio/videos">here</a> if you
+<p>Click <a id="youtube" target="_blank" href="https://www.youtube.com/user/slevvio/videos">here</a> if you
 would like to visit my YouTube channel!</p>
 
-<iframe width="640" height="360" frameborder="0" allowfullscreen
+
+<div>
+<iframe frameborder="0" allowfullscreen
  name="video"></iframe>
+    <br/>
+</div>
+</div>
+</div>
+</div>
+{#<p>?</p>#}
+<footer>
+    <div class="container">
+        <p>This site is powered by Django.</p>
+    </div>
+</footer>

@@ -8,6 +8,7 @@
     <title>Research</title>
 </head>
 
+<div id="page">
 <div id="about">
     <div class="container">
         <h2>My Research</h2>
@@ -21,16 +22,14 @@ will take you to an online version of each work.
         <p>They are
 listed in chronological order of publication.
         </p>
-        <ol>
+        <p>
             {% for paper in latest_papers %}
-            <li>
                 <a target ="_blank" href="{{ paper.address }}">{{ paper.title }}</a>
-            </li>
-        {% endfor %}
-        </ol>
-    </div>
+            {% endfor %}
+        </p>
+    <br/></div>
 </div>
-
+</div>
 
 
 

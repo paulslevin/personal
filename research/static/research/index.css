@@ -8,12 +8,6 @@ body {
     text-align: center;
     /*font-weight: 600;*/
     font-family: Roboto, sans-serif;
-    background-image: linear-gradient(
-            rgba(40, 0, 0, 0.3),
-            rgba(40, 0, 0, 0.3)
-    ),
-    url(earth.jpg);
-    background-size: cover;
     padding: 20px 5%;
     color: white;
 }
@@ -22,9 +16,15 @@ body {
     font-weight: 200;
     font-size: 25px;
     line-height: 1em;
+    text-align: center;
   }
 
 footer {
+    clear:both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
     text-align: center;
     background-color: green;
     background-size: cover;
@@ -34,10 +34,21 @@ footer {
 }
 
 ol {
+    text-align: center;
     padding-left: 0;
     padding-right: 0;
-    list-style-position: inside;
-    list-style-type: upper-roman;
+    list-style-position: outside;
+    list-style-type: square;
+}
+
+
+
+li:before {
+    /*text-align: right;*/
+}
+
+li {
+    /*text-align: left;*/
 }
 
 #about a {
@@ -49,7 +60,7 @@ ol {
     background-color: white;
     background-size: cover;
     width: 75%;
-    margin: 1% 0;
+    margin: 1% 0%;
     box-sizing: border-box;
     box-shadow: black 0 0 5px;
     border-radius: 25px;
@@ -65,3 +76,20 @@ ol {
 
 }
 
+html {
+    background-image: linear-gradient(
+            rgba(40, 0, 0, 0.3),
+            rgba(40, 0, 0, 0.3)
+    ),
+    url(earth.jpg);
+    background-size: cover;
+}
+
+html, body, #page {
+    height: 100%;
+}
+
+body > #page {
+    height: auto;
+    min-height: 100%;
+}
