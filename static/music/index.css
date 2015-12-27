@@ -1,0 +1,118 @@
+{ % load staticfiles % }
+
+body {
+    margin: 0px 0px 0px 0px;
+}
+
+#about {
+    /*margin: 0 0 2em 0;*/
+    text-align: center;
+    /*font-weight: 600;*/
+    font-family: Roboto, sans-serif;
+    padding: 20px 5%;
+    color: white;
+}
+
+#about h2 {
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 1em;
+  }
+
+
+footer {
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
+    text-align: center;
+    background-color: green;
+    background-size: cover;
+    padding: 5px 5%;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+
+.musiclink {
+    clear: both;
+    /*text-align: center;*/
+    display: inline-block;
+    text-decoration: none;
+    padding: 20px 5%;
+    color: #cc1111;
+    background-color: white;
+    background-size: cover;
+    width: 30%;
+    margin: 1% 0;
+    box-sizing: border-box;
+    box-shadow: black 0 0 5px;
+    border-radius: 25px;
+}
+
+.container {
+    clear: both;
+    margin: auto;
+    max-width: 800px;
+}
+
+@media (min-width: 600px) {
+
+}
+
+#page {
+    background-image: linear-gradient(
+            rgba(40, 0, 0, 0.3),
+            rgba(40, 0, 0, 0.3)
+    ),
+    url(keyboard.jpg);
+    background-size: cover;
+}
+
+html, body, #page {
+    height: 100%;
+}
+
+body > #page {
+    height: auto;
+    min-height: 100%;
+}
+
+#page {
+    margin: 0 0 2.5em 0;
+}
+
+a {
+    clear: both;
+    /*text-align: center;*/
+    display: inline-block;
+    text-decoration: none;
+    padding: 0.5em 0.5em;
+    color: #cc1111;
+    background-color: white;
+    background-size: cover;
+    /*width: 30%;*/
+    margin: 1% 0;
+    box-sizing: border-box;
+    box-shadow: black 0 0 5px;
+    border-radius: 100px;
+}
+
+iframe{
+    /*clear: both;*/
+    margin: auto;
+    width: 89%;
+    height: 50%;
+}
+
+br {
+    clear: both;
+}
+
+/*p a {*/
+    /*!*padding: 0;*!*/
+    /*!*margin: 0;*!*/
+    /*!*border: 0;*!*/
+    /*!*!*width: 5%;*!*!*/
+/*}*/
