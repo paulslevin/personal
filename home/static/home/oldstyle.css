@@ -1,0 +1,135 @@
+{ % load staticfiles % }
+
+/*TRYING AGAIN*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+#footer {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    height: 3em;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    background-color: green;
+    background-size: cover;
+    padding: 5px 5%;
+    color: white;
+    font-family: Roboto, sans-serif;
+}
+
+
+
+body {
+    margin: 0px 0px 0px 0px;
+}
+
+#headline {
+    font-size: 30px;
+    background-color: dodgerblue;
+    background-size: cover;
+    padding: 10px 5%;
+    color: white;
+    font-family: Roboto, helvetica, arial, sans-serif;
+    /*margin: 0*/
+}
+
+#headline h1 {
+    font-weight: 200;
+    font-size: 45px;
+    line-height: 1em;
+    /*margin-bottom: 0;*/
+}
+
+#about {
+    /*display: table-row;*/
+    /*position: relative;*/
+    padding-top: 20px;
+    width: 100%;
+    background-image: linear-gradient(
+            rgba(40, 0, 0, 0.3),
+            rgba(40, 0, 0, 0.3)
+    ),
+    url(glasgow.jpg);
+    /*min-height: 100%;*/
+    background-size: cover;
+    font-family: Roboto, sans-serif;
+    /*padding: 20px 5%;*/
+    padding-bottom: 3em;
+    color: white;
+    /*margin: 0 0 0 0;*/
+    /*overflow: hidden;*/
+    /*min-height: calc(100% - 6em)*/
+
+}
+
+#about h2 {
+    font-weight: 200;
+    font-size: 25px;
+    line-height: 1em;
+  }
+
+#about .container {
+    text-align: center;
+  }
+
+
+
+#about a {
+    text-decoration: none;
+    padding: 20px 5%;
+    color: #cc1111;
+    background-color: white;
+    width: 100%;
+    margin: 1%;
+    box-sizing: border-box;
+    box-shadow: black 0 0 5px;
+    border-radius: 25px;
+}
+
+#headline br {
+    clear: both;
+}
+
+#about br {
+    clear: both;
+}
+
+#mepic {
+    /*float: right;*/
+    width: 40%;
+    /*margin: 0 auto;*/
+    margin: 1%;
+    border: 5px solid;
+    border-color: #cc1111;
+    box-sizing: border-box;
+    border-radius: 50% 50%;
+    box-shadow: black 0 0 5px;
+}
+
+
+#headline #header{
+    float: left;
+}
+.container {
+    clear: both;
+    /*margin: auto;*/
+    margin: 0;
+    max-width: 800px;
+}
+
+@media (min-width: 600px) {
+
+}
+
