@@ -1,15 +1,14 @@
 {% load staticfiles %}
-
+<!DOCTYPE HTML>
+<html>
+<head>
 <link rel="stylesheet" type="text/css"
       href="{%  static 'home/style.css' %}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paul Slevin's Website</title>
 
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Paul Slevin's Website</title>
 </head>
-
-
-
+<body>
 <div id="wrapper">
 
     <div id="headline">
@@ -22,7 +21,17 @@
             </p>
         </div>
     </div>
+
+
+
     <div id="about">
+        <script type="text/javascript" async>
+            var headlineheight = document.getElementById("headline").clientHeight;
+            var fullLength = document.getElementsByTagName("html")[0].clientHeight;
+            var middle = document.getElementById('about');
+            var difference = fullLength-headlineheight;
+            middle.style.minHeight = "calc("+difference+"px - 3em)";
+        </script>
         <div class="container">
             <h2>
                 About Me
@@ -47,3 +56,8 @@
         </div>
     </div>
 </div>
+
+
+
+</body>
+</html>
