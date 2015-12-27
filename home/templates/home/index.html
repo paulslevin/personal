@@ -10,7 +10,6 @@
 </head>
 <body>
 <div id="wrapper">
-
     <div id="headline">
         <div class="container">
             <h1>
@@ -21,16 +20,13 @@
             </p>
         </div>
     </div>
-
-
-
     <div id="about">
         <script type="text/javascript" async>
             var headlineheight = document.getElementById("headline").clientHeight;
             var fullLength = document.getElementsByTagName("html")[0].clientHeight;
             var middle = document.getElementById('about');
             var difference = fullLength-headlineheight;
-            middle.style.minHeight = "calc("+difference+"px - 3em)";
+            middle.style.minHeight = "calc("+difference+"px - 3em - 20px)";
         </script>
         <div class="container">
             <h2>
