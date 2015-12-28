@@ -1,5 +1,5 @@
 import re
-import polynomial_parser
+from . import polynomial_parser
 from django import forms
 
 
