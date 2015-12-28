@@ -98,10 +98,40 @@ html, body {
 
 }
 
-pre {
+pre, code {
     white-space: pre-wrap;
+}
+
+code {
+    word-wrap: break-word;
 }
 
 #final{
     margin-bottom: 20px;
+}
+
+label {
+    display: none;
+}
+
+.errorlist {
+    display: none;
+}
+
+#error {
+    font-family: "Courier New";
+    color: red;
+    font-size: 20px;
+}
+
+#yay {
+    color: lawngreen;
+    font-size: 20px;
+}
+
+#notyet {
+    font-family: Palatino;
+    color: dodgerblue;
+    font-size: 20px;
+    font-style: italic;
 }
