@@ -56,6 +56,6 @@ def parser(request):
         poly = request.session['poly']
         del request.session['poly']
 
-    return render(request, 'projects/parser.html', {'poly': poly, 'form': form})
-
-
+    return render(request, 'projects/parser.html', {'poly': poly,
+                                                    'form': form,
+                                                    'request': request})

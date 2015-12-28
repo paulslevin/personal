@@ -15,14 +15,19 @@
 <p>
   This application converts a valid polynomial expression to standard form. See
   <a href="#terminology">below</a> for details of the terminology.
-  Just type a string and hit Enter. This parser is kind and allows you to
+  Just type a string in the box and hit Enter. This parser is kind and allows you to
   include spaces.
 </p>
 
 {% if poly %}
-    <p>You typed: <code>{{ poly }}</code></p>
+    <p id="yay">You typed: <code>{{ poly }}</code></p>
 {% endif %}
 <form method="post">
+    {% if form.non_field_errors %}
+        <p id="error">{{ form.non_field_errors.0 }}</p>
+    {% elif 'next' not in request.GET and not poly %}
+        <p id="notyet">Go ahead, type something!</p>
+    {% endif %}
 {% csrf_token %}
 {{ form.as_p }}
 </form>
