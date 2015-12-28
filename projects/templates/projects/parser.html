@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Parser</title>
 </head>
-
+<body>
 <div id="wrapper">
 <div id="about">
 <div class="container">
@@ -30,10 +30,17 @@
 </div>
 
 <div id="terminology">
+{#    <script type="text/javascript" async>#}
+{#            var headlineheight = document.getElementById("about").clientHeight;#}
+{#            var fullLength = document.getElementsByTagName("html")[0].innerHTML.length;#}
+{#            var middle = document.getElementById('terminology');#}
+{#            var difference = fullLength-headlineheight;#}
+{#            middle.style.minHeight = "calc("+difference+"px - 3em - 40px - 41.5px -3em)";#}
+{#        </script>#}
 <div class="container">
 <h2>Terminology</h2>
 
-<p>
+  <div class="definition">
   <strong>Definition: </strong>A <em>valid</em>
   <a target="_blank" href="https://en.wikipedia.org/wiki/Polynomial">
     polynomial</a>
@@ -41,19 +48,25 @@
   <pre>+ - 0 1 2 3 4 5 6 7 8 9 ( ) * x</pre>
   representing a polynomial in <code>x</code> such that the bracketing is correct.
   We also require that any indices are given as positive integers, with no extra
-  formatting. For example,
-  <pre>(9*x+5)**6*(3+x)*2     x**10+(1+5*x+3)**5+x**2</pre>
-  are both valid polynomials, but
-  <pre>x**0.5     x**(3-2)</pre>
-  are not.
+  formatting.
+    </div>
+    <p>
+    For example,
+    </p>
+  <pre>(9*x+5)**6*(3+x)*2
+x**10+(1+5*x+3)**5+x**2</pre>
+  <p>are both valid polynomials, but</p>
+  <pre>x**0.5
+x**(3-2)</pre>
+  <p>are not.
 </p>
-<p>
+<div class="definition" id="final">
 <strong>Definition: </strong>A polynomial is in <em>standard form</em> if it looks like
 <pre>
 a_n*x**n+...+a_2*x**2+a_1*x+a_0
 </pre>
 for some number <code>n</code> and numbers <code>a_n,...,a_0</code>.
-</p>
+</div>
 </div>
 </div>
 
@@ -63,3 +76,5 @@ for some number <code>n</code> and numbers <code>a_n,...,a_0</code>.
     </div>
 </div>
 </div>
+</body>
+</html>
