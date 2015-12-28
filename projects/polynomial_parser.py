@@ -170,9 +170,15 @@ def erase_indices(poly):
     assert "(" not in poly
     if "**" not in poly:
         return poly
+    elif "**" in poly and poly.count("*") == 2 and "+" in poly:
+        terms = poly.split("+")
+        terms[-1] = erase_indices(terms[-1])
+        return "+".join(terms)
     elif "**" in poly and poly.count("*") == 2:
+        print poly
         j = poly.index("**")
         poly = "(" + poly[:j] + ")*" + poly[j + 1:]
+        print poly
         return erase_brackets(poly)
     elif "**" in poly:
         poly = poly.replace("**", "^")
@@ -207,3 +213,5 @@ def simplify(poly):
     if final_poly:
         return final_poly
     return "0"
+
+print simplify("x+x**2")
