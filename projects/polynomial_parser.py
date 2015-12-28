@@ -169,7 +169,7 @@ def erase_indices(poly):
     assert "(" not in poly
     if "**" not in poly:
         return poly
-    if "+" in poly:
+    elif "+" in poly:
         terms = poly.split("+")
         for i, v in enumerate(terms):
             if "**" in v:
@@ -214,5 +214,3 @@ def simplify(poly):
     if final_poly:
         return final_poly
     return "0"
-
-print simplify("(x+3)*(x-3)**7")
