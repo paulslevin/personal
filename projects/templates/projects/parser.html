@@ -1,21 +1,23 @@
 {% load staticfiles %}
-
+<!DOCTYPE HTML>
+<html>
+<head>
 <link rel="stylesheet" type="text/css"
-href="{% static 'projects/style.css' %}"/>
+      href="{%  static 'projects/parser.css' %}"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Parser</title>
+</head>
 
-<title>
-  Polynomial Parser
-</title>
-
-<h1>Polynomial Parser</h1>
-
+<div id="wrapper">
+<div id="about">
+<div class="container">
+<h2>Polynomial Parser</h2>
 <p>
   This application converts a valid polynomial expression to standard form. See
   <a href="#terminology">below</a> for details of the terminology.
   Just type a string and hit Enter. This parser is kind and allows you to
   include spaces.
 </p>
-
 
 {% if poly %}
     <p>You typed: <code>{{ poly }}</code></p>
@@ -24,9 +26,12 @@ href="{% static 'projects/style.css' %}"/>
 {% csrf_token %}
 {{ form.as_p }}
 </form>
+</div>
+</div>
 
-
-<h2 id="terminology">Terminology</h2>
+<div id="terminology">
+<div class="container">
+<h2>Terminology</h2>
 
 <p>
   <strong>Definition: </strong>A <em>valid</em>
@@ -49,3 +54,12 @@ a_n*x**n+...+a_2*x**2+a_1*x+a_0
 </pre>
 for some number <code>n</code> and numbers <code>a_n,...,a_0</code>.
 </p>
+</div>
+</div>
+
+<div id="footer">
+    <div class="container">
+        <p>This site is powered by Django.</p>
+    </div>
+</div>
+</div>

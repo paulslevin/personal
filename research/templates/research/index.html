@@ -1,15 +1,21 @@
 {% load staticfiles %}
-
+<!DOCTYPE HTML>
+<html>
+<head>
 <link rel="stylesheet" type="text/css"
       href="{%  static 'research/index.css' %}"/>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Research</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research</title>
 </head>
-
-<div id="page">
+<div id="wrapper">
 <div id="about">
+{#    <script type="text/javascript" async>#}
+{#            var headlineheight = document.getElementById("headline").clientHeight;#}
+{#            var fullLength = document.getElementsByTagName("html")[0].clientHeight;#}
+{#            var middle = document.getElementById('about');#}
+{#            var difference = fullLength-headlineheight;#}
+{#            middle.style.minHeight = "calc("+difference+"px - 3em - 20px)";#}
+{#        </script>#}
     <div class="container">
         <h2>My Research</h2>
         <p>
@@ -29,13 +35,10 @@ listed in chronological order of publication.
         </p>
     <br/></div>
 </div>
-</div>
-
-
-
-
-<footer>
+<div id="footer">
     <div class="container">
         <p>This site is powered by Django.</p>
     </div>
-</footer>
+</div>
+</div>
+</html>

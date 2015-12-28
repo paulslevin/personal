@@ -1,14 +1,14 @@
 {% load staticfiles %}
-
+<!DOCTYPE HTML>
+<html>
+<head>
 <link rel="stylesheet" type="text/css"
       href="{%  static 'music/index.css' %}"/>
-
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Music</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Music</title>
 </head>
 
-<div id="page">
+<div id="wrapper">
 <div id="about">
 <div class="container">
         <h2>My Music</h2>
@@ -41,19 +41,26 @@ will open up an embedded YouTube video for you to listen to.
 
 <p>Click <a id="youtube" target="_blank" href="https://www.youtube.com/user/slevvio/videos">here</a> if you
 would like to visit my YouTube channel!</p>
+</div>
+</div>
 
-
-<div>
+<div id="music">
+<div class="container" id="y">
 <iframe frameborder="0" allowfullscreen
  name="video"></iframe>
-    <br/>
+    <script type="text/javascript" async>
+        var f = document.getElementsByTagName("iframe")[0]
+        var w = document.getElementById("y").clientWidth;
+        var h = 0.562 * w;
+        f.style.height = h+"px";
+    </script>
 </div>
 </div>
-</div>
-</div>
-{#<p>?</p>#}
-<footer>
+
+<div id="footer">
     <div class="container">
         <p>This site is powered by Django.</p>
     </div>
-</footer>
+</div>
+</div>
+</html>

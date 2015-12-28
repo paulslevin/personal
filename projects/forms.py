@@ -22,14 +22,19 @@ class PolynomialForm(forms.Form):
         d = {"(": 1, ")": -1}
         count = 0
 
+
+
         if not poly:
             return self.cleaned_data
         if "()" in poly:
             raise forms.ValidationError("Invalid format")
         for character in poly:
-            if character not in ALLOWED:
-                raise forms.ValidationError("Invalid character: {}".format(
+            try:
+                if character not in ALLOWED:
+                    raise forms.ValidationError("Invalid character: {}".format(
                     character))
+            except UnicodeEncodeError:
+                raise forms.ValidationError("Invalid format")
             count += d.get(character, 0)
             if count < 0:
                 raise forms.ValidationError("Invalid bracketing")
