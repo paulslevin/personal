@@ -10,11 +10,11 @@ import re
 import operator
 
 bracket_re = re.compile("\([^\(]+?\)")
-IMPOSSIBLES = {"++", "--", "**(", "xx",}
+IMPOSSIBLES = {"++", "--", "**(", "xx", }
 IMPOSSIBLES |= set("{}x".format(i) for i in range(10))
 IMPOSSIBLES |= set("x{}".format(i) for i in range(10))
 ALLOWED = {"1", "2", "3", "4", "5", "6", "7", "8", "9",
-           "0", "x", "+", "*", " ", "-", "(", ")",}
+           "0", "x", "+", "*", " ", "-", "(", ")", }
 
 
 def correct_input(string):
@@ -129,7 +129,6 @@ def sort_term(term):
     """
     subterms, ints = term.split("*"), []
     for t in sorted(subterms):
-        power_index = t.find("^")
         t = t.replace("^", "**")
         if t[-1].isdigit():
             ints.append(int(t))
@@ -149,7 +148,7 @@ def get_coeff_dictionary(poly):
     :param poly:
     """
     poly = erase_brackets(poly)
-    poly = erase_indices(poly) # we need the polynomial not to contain **
+    poly = erase_indices(poly)  # we need the polynomial not to contain **
     terms = poly.split("+")
     sorted_terms = [sort_term(term) for term in terms]
     coeff_dict = {}
@@ -216,5 +215,3 @@ def simplify(poly):
     if final_poly:
         return final_poly
     return "0"
-
-print simplify("x+x**2+5")
