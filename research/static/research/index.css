@@ -89,3 +89,10 @@ html {
     url(earth.jpg);
     background-size: cover;
 }
+
+#footer a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0 20px;
+    color: white;
+}

@@ -59,7 +59,10 @@ would like to visit my YouTube channel!</p>
 
 <div id="footer">
     <div class="container">
-        <p>This site is powered by Django.</p>
+         <p>   <a href="{% url 'home:index' %}">Home</a>
+            | <a href="{% url 'projects:index' %}">Projects</a>
+            | <a href="{% url 'research:index' %}">Research</a>
+            | <a href="{% url 'music:index' %}">Music</a></p>
     </div>
 </div>
 </div>

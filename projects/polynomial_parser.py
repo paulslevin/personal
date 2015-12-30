@@ -1,6 +1,6 @@
 """
 Executive function: simplify
-Input: expression containing +,-,*,**,(,),x,0-9 that can be read as
+Input: expression containing +, - , *, **, (, ), x, 0-9 that can be read as
 a polynomial
 Output: the expression in standard form
 Example: "(x-1)*(x+1)" --> "x**2-1"
@@ -94,9 +94,10 @@ def erase_brackets(expr):
             j = i + len(expr[: last]) + 1
             new_exp = dist(terms, v)
             expr = expr.replace(expr[first: j], new_exp, 1)
+            # return expr
         # or get rid of indices
         elif expr[last: last + 2] == "**":
-            i, v = get_until(expr[last + 2:], "+", "(")
+            i, v = get_until(expr[last + 2:], "+", "(", "*")
             j = i + len(expr[: last]) + 2
             offset = len(str(v)) + 2
             expr = expr.replace(expr[first:j],
@@ -176,10 +177,8 @@ def erase_indices(poly):
                 terms[i] = erase_indices(v)
         return "+".join(terms)
     elif "**" in poly and poly.count("*") == 2:
-        print poly
         j = poly.index("**")
         poly = "(" + poly[:j] + ")*" + poly[j + 1:]
-        print poly
         return erase_brackets(poly)
     elif "**" in poly:
         poly = poly.replace("**", "^")

@@ -50,7 +50,7 @@ body {
 }
 
 
-.musiclink {
+#about .musiclink {
     clear: both;
     /*text-align: center;*/
     display: inline-block;
@@ -85,7 +85,7 @@ body {
     background-size: cover;
 }
 
-a {
+#about a {
     clear: both;
     /*text-align: center;*/
     display: inline-block;
@@ -122,4 +122,11 @@ br {
 
 #y {
     margin-bottom: 20px;
+}
+
+#footer a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0 20px;
+    color: white;
 }

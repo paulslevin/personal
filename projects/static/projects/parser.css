@@ -16,6 +16,17 @@ html, body {
 	position:relative;
 }
 
+a:link {
+    color: #ff596a;
+}
+
+a:visited {
+    color: #c154ff;
+}
+a:hover {
+    color:#ffcc00;
+}
+
 #about {
     text-align: center;
     /*padding-top: 20px;*/

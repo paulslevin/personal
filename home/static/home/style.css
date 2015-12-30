@@ -113,3 +113,9 @@ body {
 br {
     clear: both;
 }
+
+#footer a {
+    text-decoration: none;
+    padding: 0 20px;
+    color: white;
+}
