@@ -18,7 +18,7 @@ class Coauthor(models.Model):
 class Paper(models.Model):
     doi = models.CharField(max_length=200, blank=True, null=True)
     title = models.CharField(max_length=500)
-    coauthors = models.ManyToManyField(Coauthor, blank=True, null=True)
+    coauthors = models.ManyToManyField(Coauthor, blank=True)
     publish_date = models.DateField('date published', blank=True, null=True)
     address = models.URLField(max_length=200)
 

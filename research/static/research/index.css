@@ -18,26 +18,32 @@ body {
 }
 
 #about {
+    padding-top: 20px;
+    /*height: 15px;*/
     text-align: center;
     /*padding-top: 20px;*/
-	padding-bottom: 3em; /* Height of the footer element */
-    /*width: 100%;*/
+    padding-bottom: 3em; /* Height of the footer element */
+    width: 100%;
     /*background-image: linear-gradient(*/
-            /*rgba(40, 0, 0, 0.3),*/
-            /*rgba(40, 0, 0, 0.3)*/
+    /*rgba(40, 0, 0, 0.3),*/
+    /*rgba(40, 0, 0, 0.3)*/
     /*),*/
-    background-size: cover;
-    }
-
-#about {
-    text-align: center;
-    /*font-weight: 600;*/
-    font-family: Roboto, sans-serif;
-    padding: 20px 5%;
-    color: white;
+    /*background-size: cover;*/
 }
 
+
+/*#about {*/
+    /*text-align: center;*/
+    /*!*font-weight: 600;*!*/
+    /*font-family: Roboto, sans-serif;*/
+    /*padding: 20px 5%;*/
+    /*color: white;*/
+/*}*/
+
 #about h2 {
+    /*padding-top: 20px;*/
+    /*padding-bottom: 20px;*/
+    /*margin: 0;*/
     font-weight: 200;
     font-size: 25px;
     line-height: 1em;
@@ -45,7 +51,6 @@ body {
   }
 
 #footer {
-	background:green;
 	width:100%;
 	height: 3em;
 	position:absolute;
