@@ -77,7 +77,10 @@ for some number <code>n</code> and numbers <code>a_n,...,a_0</code>.
 
 <div id="footer">
     <div class="container">
-        <p>This site is powered by Django.</p>
+         <p>   <a href="{% url 'home:index' %}">Home</a>
+            | <a href="{% url 'projects:index' %}">Projects</a>
+            | <a href="{% url 'research:index' %}">Research</a>
+            | <a href="{% url 'music:index' %}">Music</a></p>
     </div>
 </div>
 </div>

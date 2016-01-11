@@ -21,6 +21,6 @@ urlpatterns = [
     url(r'^research/', include('research.urls', namespace="research")),
     url(r'^music/', include('music.urls', namespace="music")),
     url(r'^projects/', include('projects.urls', namespace="projects")),
-    url(r'^$', include('home.urls', namespace="home")),
+    url(r'^', include('home.urls', namespace="home")),
     url(r'^admin/', admin.site.urls)
 ]

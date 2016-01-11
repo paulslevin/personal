@@ -72,6 +72,12 @@ a:hover {
     background-size: cover;
 }
 
+#footer a {
+    text-align: center;
+    text-decoration: none;
+    padding: 0 3.5%;
+    color: white;
+}
 
 #terminology {
     padding-bottom: 3em;
